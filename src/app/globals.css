@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Theme tokens ---------- */
+/* Every "cream" / "ink" utility in the app resolves to these CSS variables
+   (see tailwind.config.ts), so switching the .dark class on <html> re-themes
+   the entire site with no per-component changes. Light is the default. */
+:root {
+  --cream: 248 243 236;
+  --cream-50: 253 251 248;
+  --cream-100: 248 243 236;
+  --cream-200: 241 232 218;
+  --ink: 42 33 29;
+  --ink-soft: 74 61 54;
+  --rose-50: 251 241 239;
+  --rose-100: 243 220 216;
+  /* Accent banner background (Design Philosophy / From Sketch to Garment) —
+     switches with the theme toggle like every other page-chrome token. */
+  --accent-quote: oklch(89.9% 0.061 343.231);
+}
+
+.dark {
+  --cream: 26 22 19;
+  --cream-50: 19 16 14;
+  --cream-100: 32 27 23;
+  --cream-200: 46 39 33;
+  --ink: 240 233 224;
+  --ink-soft: 198 186 174;
+  --rose-50: 46 27 26;
+  --rose-100: 61 35 33;
+  --accent-quote: oklch(37.955% 0.13008 350.62 / 0.858);
+}
+
+:root {
+  /* Fixed (non-theme-reactive) tokens for the site's deliberate dark accent
+     bands and photo overlays — these stay dark-with-light-text in both
+     light and dark mode, since they're a brand accent, not page chrome. */
+  --charcoal: 42 33 29;
+  --parchment: 248 243 236;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background-color: rgb(var(--cream));
+  color: rgb(var(--ink));
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background-color: #ad6259;
+  color: rgb(var(--cream));
+}
+
+/* Thin, elegant scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--cream));
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d6c4b3;
+  border-radius: 999px;
+  border: 2px solid rgb(var(--cream));
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+}
+
+.font-body {
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
+  }
+  .hairline {
+    height: 1px;
+  }
+  .container-page {
+    @apply mx-auto max-w-8xl px-6 sm:px-10 lg:px-16;
+  }
+}
+
+/* Custom underline hover for nav links */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
