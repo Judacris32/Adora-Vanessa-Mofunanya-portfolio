@@ -85,7 +85,6 @@ export default function ContactForm() {
           </motion.p>
         )}
       </div>
-      <p className="font-body text-xs leading-relaxed text-ink/40">{contactCopy.formNote}</p>
     </form>
   );
 }
