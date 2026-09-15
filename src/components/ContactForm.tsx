@@ -14,12 +14,13 @@ export default function ContactForm() {
     const form = new FormData(e.currentTarget);
     const name = form.get("name")?.toString() ?? "";
     const email = form.get("email")?.toString() ?? "";
+    const phone = form.get("phone")?.toString() ?? "";
     const type = form.get("type")?.toString() ?? "";
     const message = form.get("message")?.toString() ?? "";
 
     const subject = encodeURIComponent(`${type || "Inquiry"} — ${name}`);
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nInquiry type: ${type}\n\n${message}`
+      `Name: ${name}\nEmail: ${email}${phone ? `\nPhone: ${phone}` : ""}\nInquiry type: ${type}\n\n${message}`
     );
 
     // No backend is wired up yet — this opens a pre-filled email as a
@@ -30,11 +31,13 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-7">
-      <div className="grid gap-7 sm:grid-cols-2">
-        <Field label="Name" name="name" type="text" required />
-        <Field label="Email" name="email" type="email" required />
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="grid gap-5 sm:grid-cols-2">
+        <Field label="Name" name="name" type="text" placeholder="Your full name" required />
+        <Field label="Email" name="email" type="email" placeholder="you@email.com" required />
       </div>
+
+      <Field label="Phone" name="phone" type="tel" placeholder="Optional" />
 
       <div>
         <label className="font-body text-[12px] uppercase tracking-[0.2em] text-ink/50">
@@ -44,7 +47,7 @@ export default function ContactForm() {
           {inquiryTypes.map((t) => (
             <label key={t} className="cursor-pointer">
               <input type="radio" name="type" value={t} defaultChecked={t === inquiryTypes[0]} className="peer sr-only" />
-              <span className="inline-block rounded-full border border-ink/20 px-4 py-2 font-body text-xs uppercase tracking-[0.12em] text-ink/60 transition-colors peer-checked:border-ink peer-checked:bg-ink peer-checked:text-cream">
+              <span className="inline-block rounded-full border border-ink/20 px-4 py-2 font-body text-xs uppercase tracking-[0.12em] text-ink/60 transition-colors peer-checked:border-ink peer-checked:bg-charcoal peer-checked:text-parchment peer-focus-visible:ring-2 peer-focus-visible:ring-rose-400 peer-focus-visible:ring-offset-2">
                 {t}
               </span>
             </label>
@@ -54,24 +57,24 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="message" className="font-body text-[12px] uppercase tracking-[0.2em] text-ink/50">
-          Tell me about your vision
+          Tell me about your vision <span className="text-rose-600">*</span>
         </label>
         <textarea
           id="message"
           name="message"
           required
           rows={6}
-          className="mt-3 w-full border-b border-ink/20 bg-transparent py-2 font-body text-base text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-rose-600"
+          className="mt-3 w-full rounded-lg border border-ink/15 bg-white/70 px-4 py-3 font-body text-base text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-rose-500 focus:bg-white focus:ring-2 focus:ring-rose-100"
           placeholder="Occasion, timeline, fabric or colour ideas, inspiration..."
         />
       </div>
 
-      <div className="flex items-center gap-5 pt-2">
+      <div className="flex flex-wrap items-center gap-5 pt-2">
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           type="submit"
-          className="rounded-full bg-ink px-8 py-4 font-body text-[13px] uppercase tracking-[0.2em] text-cream transition-colors hover:bg-rose-600"
+          className="rounded-full bg-charcoal px-8 py-4 font-body text-[13px] uppercase tracking-[0.2em] text-parchment transition-colors hover:bg-rose-600"
         >
           Send Inquiry
         </motion.button>
@@ -85,6 +88,7 @@ export default function ContactForm() {
           </motion.p>
         )}
       </div>
+      <p className="font-body text-xs leading-relaxed text-ink/40">{contactCopy.formNote}</p>
     </form>
   );
 }
@@ -93,24 +97,28 @@ function Field({
   label,
   name,
   type,
+  placeholder,
   required,
 }: {
   label: string;
   name: string;
   type: string;
+  placeholder?: string;
   required?: boolean;
 }) {
   return (
     <div>
       <label htmlFor={name} className="font-body text-[12px] uppercase tracking-[0.2em] text-ink/50">
         {label}
+        {required && <span className="text-rose-600"> *</span>}
       </label>
       <input
         id={name}
         name={name}
         type={type}
         required={required}
-        className="mt-3 w-full border-b border-ink/20 bg-transparent py-2 font-body text-base text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-rose-600"
+        placeholder={placeholder}
+        className="mt-3 w-full rounded-lg border border-ink/15 bg-white/70 px-4 py-3 font-body text-base text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-rose-500 focus:bg-white focus:ring-2 focus:ring-rose-100"
       />
     </div>
   );

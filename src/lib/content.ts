@@ -90,7 +90,12 @@ export const pressCopy = {
 
 export const contactCopy = {
   eyebrow: "Contact",
-  heading: "Begin a commission",
+  heading: "Let's Create Together",
   body:
-    "For collaborations, custom commissions, styling requests, or press enquiries, reach out below or via Instagram, every Dela-Fin piece is made to order, so please share as much detail as you can about what you have in mind.",
-  };
+    "For collaborations, custom commissions, styling requests, or press enquiries, reach out below or via Instagram — every Dela-Fin piece is made to order, so please share as much detail as you can about what you have in mind.",
+  personalNote:
+    "Every enquiry lands in my own inbox and I read each one myself — expect a reply within 2–3 days.",
+  personalSign: "— Adora",
+  formNote:
+    "This form opens a pre-filled email in your mail app. For a live, no-reload inquiry form, connect this to a form service such as Formspree or Resend from the README.",
+};

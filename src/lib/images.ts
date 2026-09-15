@@ -13,7 +13,7 @@ export const portraits: CollectionImage[] = [
   {
     src: "/images/portraits/portrait-01.jpg",
     alt: "Adora Vanessa Mofunanya seated in her studio, surrounded by African wax print fabrics",
-    caption: "In the studio “Design. Create. Inspire.”",
+    caption: "In the studio — “Design. Create. Inspire.”",
   },
   {
     src: "/images/portraits/portrait-02.jpg",
@@ -143,6 +143,15 @@ export const logo = {
 };
 
 export const instagramIcon = { src: "/images/social/instagram-icon.png", alt: "Instagram" };
+
+// The real Gmail mark — accurate here since the inquiry address is a genuine
+// Gmail account, unlike an earlier draft that paired it with a placeholder
+// custom-domain address.
+export const mailIcon = { src: "/images/social/mail-icon.png", alt: "Gmail" };
+
+// The real Google Maps pin — used only on links that actually open Google
+// Maps, so it's identifying the destination rather than implying affiliation.
+export const mapIcon = { src: "/images/social/map-icon.png", alt: "Google Maps" };
 
 // Hero slideshow — a curated atelier/lifestyle sequence rather than a
 // portrait. Swap in different photography any time by editing this array;

@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Mail, MapPin } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
 import { contactCopy, site } from "@/lib/content";
-import { portraits, instagramIcon } from "@/lib/images";
+import { portraits, instagramIcon, mailIcon, mapIcon } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -31,7 +30,7 @@ export default function ContactPage() {
                 href={`mailto:${site.email}`}
                 className="flex items-center gap-3 font-body text-ink/70 transition-colors hover:text-rose-600"
               >
-                <Mail size={18} strokeWidth={1.5} />
+                <Image src={mailIcon.src} alt="" width={22} height={22} className="h-[22px] w-[22px]" />
                 {site.email}
               </a>
               <a
@@ -40,17 +39,29 @@ export default function ContactPage() {
                 rel="noreferrer noopener"
                 className="flex items-center gap-3 font-body text-ink/70 transition-colors hover:text-rose-600"
               >
-                <Image src={instagramIcon.src} alt="" width={18} height={18} className="h-[18px] w-[18px]" />
+                <Image src={instagramIcon.src} alt="" width={22} height={22} className="h-[22px] w-[22px] rounded-[6px]" />
                 {site.instagramHandle}
               </a>
-              <p className="flex items-center gap-3 font-body text-ink/70">
-                <MapPin size={18} strokeWidth={1.5} />
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.location)}`}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="flex items-center gap-3 font-body text-ink/70 transition-colors hover:text-rose-600"
+              >
+                <Image src={mapIcon.src} alt="" width={22} height={22} className="h-[22px] w-[22px]" />
                 {site.location}
-              </p>
+              </a>
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}>
+          <Reveal delay={0.08}>
+            <p className="mt-8 max-w-md font-display text-xl italic leading-relaxed text-ink/80">
+              “{contactCopy.personalNote}”
+            </p>
+            <p className="mt-2 font-body text-sm text-ink/50">{contactCopy.personalSign}</p>
+          </Reveal>
+
+          <Reveal delay={0.14}>
             <div className="relative mt-10 hidden aspect-[4/3] w-full overflow-hidden rounded-sm sm:block">
               <Image
                 src={portraits[8].src}
@@ -65,7 +76,7 @@ export default function ContactPage() {
 
         <div className="lg:col-span-6 lg:col-start-7">
           <Reveal delay={0.16}>
-            <div className="rounded-sm border border-ink/10 bg-cream-100 p-8 sm:p-10">
+            <div className="rounded-2xl border border-ink/15 bg-cream-100 p-8 shadow-[0_1px_2px_rgba(26,22,20,0.04),0_16px_40px_-24px_rgba(26,22,20,0.35)] sm:p-10">
               <ContactForm />
             </div>
           </Reveal>
