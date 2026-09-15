@@ -5,7 +5,7 @@
 // schooling, or biographical specifics that weren't provided.
 
 export const site = {
-  name: "Adora Vanessa Mofunanya",
+  name: "Adaora Vanessa Mofunanya",
   role: "Fashion Designer",
   tagline: "Style Lives Deeper",
   label: "Dela-Fin",
@@ -92,10 +92,10 @@ export const contactCopy = {
   eyebrow: "Contact",
   heading: "Let's Create Together",
   body:
-    "For collaborations, custom commissions, styling requests, or press enquiries, reach out below or via Instagram — every Dela-Fin piece is made to order, so please share as much detail as you can about what you have in mind.",
+    "For collaborations, custom commissions, styling requests, or press enquiries, reach out below or via Instagram, every Dela-Fin piece is made to order, so please share as much detail as you can about what you have in mind.",
   personalNote:
     "Every enquiry lands in my own inbox and I read each one myself,expect a reply within 2–3 days.",
   personalSign: " Adaora",
   formNote:
-    "Thank you for reaching out! We appreciate your interest in Adora Vanessa Mofunanya's fashion collections and design services.",
+    "Thank you for reaching out! We appreciate your interest in Adaora Vanessa Mofunanya's fashion collections and design services.",
 };
