@@ -31,7 +31,7 @@ export const homeCopy = {
   introEyebrow: "Welcome",
   introHeading: "Craft, colour, and quiet luxury",
   introBody:
-    "Every Dela-Fin piece begins as a sketch and ends as a garment shaped entirely by hand, hand-crocheted florals, hand-set beadwork, draped faux fur, and richly patterned textiles brought together with a couturier's precision. Adora Vanessa Mofunanya designs for women and men who want their clothing to hold a story, not just a silhouette.",
+    "Every Dela-Fin piece begins as a sketch and ends as a garment shaped entirely by hand, hand-crocheted florals, hand-set beadwork, draped faux fur, and richly patterned textiles brought together with a couturier's precision. Adaora Vanessa Mofunanya designs for women and men who want their clothing to hold a story, not just a silhouette.",
   introBodySecondary:
     "It's slow by design. A single commission can move between the sewing table, the beading frame, and the mannequin more times than most ready-to-wear ever sees weeks of handwork between first sketch and final fitting. What's left behind is texture you can trace with a finger, colour built up in layers, and seams that were considered rather than simply closed.",
   introQuote: "Nothing leaves the studio until it's been touched by hand at least a dozen times.",
@@ -49,19 +49,19 @@ export const homeCopy = {
 
 export const aboutCopy = {
   eyebrow: "About",
-  heading: "Adora Vanessa Mofunanya",
+  heading: "Adaora Vanessa Mofunanya",
   subheading: "Founder & Creative Director, Dela-Fin",
   education: "BSc Public Administration - Nnamdi Azikiwe University 2018",
   lede:
-    "Adora Vanessa Mofunanya is a UK-based fashion designer, and the heart behind Dela-Fin. a handmade luxury fashion house she built from the ground up. She moves easily between couture, ready-to-wear, and custom commission, but holds herself to one standard no matter the piece: everything is designed, cut, and finished by her own hands.",
+    "Adaora Vanessa Mofunanya is a UK-based fashion designer, and the heart behind Dela-Fin. a handmade luxury fashion house she built from the ground up. She moves easily between couture, ready-to-wear, and custom commission, but holds herself to one standard no matter the piece: everything is designed, cut, and finished by her own hands.",
   paragraphs: [
-    "For Adora, it always starts with paper. Every collection begins as a series of croquis sketches, the margins filled with notes on fabric and construction, a marble-print crop dress here, a check fringed trouser there, a fully oversized cocoon blazer scribbled in the corner. By the time an idea reaches the mannequin, it has usually grown bolder than the sketch that started it.",
+    "For Adaora, it always starts with paper. Every collection begins as a series of croquis sketches, the margins filled with notes on fabric and construction, a marble-print crop dress here, a check fringed trouser there, a fully oversized cocoon blazer scribbled in the corner. By the time an idea reaches the mannequin, it has usually grown bolder than the sketch that started it.",
     "What sets Dela-Fin apart is as much about touch as it is about colour. Hand-crocheted 3D florals, faux fur dyed and worked into asymmetric wraps and trims, satin left to fall in soft drapes, and African wax prints layered against sculptural, corset-built silhouettes. it's a wardrobe that stretches from red-carpet eveningwear and full runway couture down to hand-embellished footwear, accessories, and loungewear stitched with the Dela-Fin name. Every piece, however different, is held to the same handmade standard.",
-    "That standard didn't go unnoticed. In December 2025, Adora was named the AFAA 2025 Emerging Innovative Fashion Designer of the Year by the African Fashion and Arts Award recognised, as Independent Online News put it, “for her work in modern African fashion and creative thinking.”",
+    "That standard didn't go unnoticed. In December 2025, Adaora was named the AFAA 2025 Emerging Innovative Fashion Designer of the Year by the African Fashion and Arts Award recognised, as Independent Online News put it, “for her work in modern African fashion and creative thinking.”",
   ],
   philosophyHeading: "Design philosophy",
   philosophyBody:
-    "“We design exquisite handmade pieces that celebrate artistry, precision, and timeless craftsmanship, where every stitch tells a story of luxury and individuality.” It's the founding principle behind Dela-Fin, and the thread that runs through every Adora Vanessa Mofunanya piece: sophisticated, hand-finished clothing built to reflect the person wearing it.",
+    "“We design exquisite handmade pieces that celebrate artistry, precision, and timeless craftsmanship, where every stitch tells a story of luxury and individuality.” It's the founding principle behind Dela-Fin, and the thread that runs through every Adaora Vanessa Mofunanya piece: sophisticated, hand-finished clothing built to reflect the person wearing it.",
   processHeading: "From sketch to garment",
   processBody:
     "It always begins with a hand-drawn croquis, fabric notes and construction details scrawled in the margins before a single stitch is made. The custom overcoat pictured below, finished with handmade 3D crochet roses, traces that whole journey: from a page in her sketchbook to a finished commission worn on stage.",
@@ -73,12 +73,12 @@ export const pressCopy = {
   subheading: "Awards, features, and a closer look at the work behind them.",
   awardTitle: "AFAA 2025 Emerging Innovative Fashion Designer of the Year",
   awardBody:
-    "On 5 December 2025, Adora Vanessa Mofunanya was announced the winner of the Emerging Innovative Fashion Designer of the Year award at the AFAA 2025 Awards Ceremony, held at the Transcorp Hilton Hotel in Abuja, Nigeria. The African Fashion and Arts Award (AFAA) is a Pan-African creative industry platform recognising fashion and arts creatives across the continent. Her nomination followed a month-long public call for nominations (1–30 August 2025); AFAA's organising committee noted that her name and brand received multiple nominations, describing it as \"a testament to her influence and excellence.\"",
+    "On 5 December 2025, Adaora Vanessa Mofunanya was announced the winner of the Emerging Innovative Fashion Designer of the Year award at the AFAA 2025 Awards Ceremony, held at the Transcorp Hilton Hotel in Abuja, Nigeria. The African Fashion and Arts Award (AFAA) is a Pan-African creative industry platform recognising fashion and arts creatives across the continent. Her nomination followed a month-long public call for nominations (1–30 August 2025); AFAA's organising committee noted that her name and brand received multiple nominations, describing it as \"a testament to her influence and excellence.\"",
   articleQuoteHeading: "As featured in",
   articleOutlet: "Independent Online News",
   articleDate: "7 December 2025",
   articleAuthor: "Abisola Shojobi",
-  articleHeadline: "Adora Vanessa Mofunanya Wins AFAA 2025 Emerging Innovative Fashion Designer of The Year",
+  articleHeadline: "Adaora Vanessa Mofunanya Wins AFAA 2025 Emerging Innovative Fashion Designer of The Year",
   articleQuote:
     "The Dela-Fin co-founder and Creative Director is being honoured for her work in modern African fashion and creative thinking.",
   articleUrl:
@@ -94,8 +94,8 @@ export const contactCopy = {
   body:
     "For collaborations, custom commissions, styling requests, or press enquiries, reach out below or via Instagram — every Dela-Fin piece is made to order, so please share as much detail as you can about what you have in mind.",
   personalNote:
-    "Every enquiry lands in my own inbox and I read each one myself — expect a reply within 2–3 days.",
-  personalSign: "— Adora",
+    "Every enquiry lands in my own inbox and I read each one myself,expect a reply within 2–3 days.",
+  personalSign: " Adaora",
   formNote:
-    "This form opens a pre-filled email in your mail app. For a live, no-reload inquiry form, connect this to a form service such as Formspree or Resend from the README.",
+    "Thank you for reaching out! We appreciate your interest in Adora Vanessa Mofunanya's fashion collections and design services.",
 };
