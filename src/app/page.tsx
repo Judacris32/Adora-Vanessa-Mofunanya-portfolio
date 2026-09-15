@@ -12,7 +12,7 @@ const introFacts = [
   { label: "Studio", value: "Essex, United Kingdom" },
   { label: "Technique", value: "Hand-crochet, beadwork & draped faux fur" },
   { label: "Production", value: "Made to order, one of one" },
-  { label: "Education", value: "BSc Public Administration, Nnamdi Azikiwe University 2018" },
+  { label: "Recognition", value: "AFAA 2025 Emerging Innovative Fashion Designer of the Year" }
 ];
 
 const marqueeItems = [
